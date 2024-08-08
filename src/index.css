@@ -40,3 +40,9 @@ button {
   @apply bg-black text-white px-2 rounded-md hover:bg-slate-700;
 
 }
+
+.Selectcard {
+  @apply scale-110 border border-red-300;
+  transition: all 0.3s;
+  box-shadow: 2px 2px 2px slategrey, -2px -2px 2px slategray;
+}

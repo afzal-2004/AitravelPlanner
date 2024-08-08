@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa6";
 export const HomePage = () => {
   return (
     <>
@@ -10,7 +11,10 @@ export const HomePage = () => {
           </h1>
           <p className=" sm:text-[22px] text-[18px]  text-slate-400 text-center">{`Welcome to  JourneyGenie, where cutting-edge AI redefines travel. Our platform transforms how you plan, experience, and enjoy your journeys, offering personalized itineraries, real-time updates, and intelligent recommendations.`}</p>
           <Link to={"/GenrateTrip"}>
-            <button className=" border p-3">Get Started</button>
+            <button className=" border p-3 flex  gap-2 items-center">
+              Get Started
+              <FaArrowRight />
+            </button>
           </Link>
         </main>
       </div>
