@@ -3,8 +3,11 @@ import { GrMoney } from "react-icons/gr";
 import { PiBeerBottle } from "react-icons/pi";
 import { MdOutlineFamilyRestroom } from "react-icons/md";
 import { FaUsers, FaUntappd, FaArrowRight } from "react-icons/fa6";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 
+import { chatSession } from "../../Serveice/AiModel";
 export const GenratePage = () => {
   const data = [
     {
@@ -50,19 +53,32 @@ export const GenratePage = () => {
       Person: "5 to 10",
     },
   ];
+
   const [place, setplace] = useState("");
   const [days, setdays] = useState(null);
   const [budget, setbudget] = useState(null);
   const [person, setperson] = useState(null);
+  // const [loader, setloader] = useState(false);
   const [SelectBudget, setSelectBudget] = useState(null);
   const [SelectPerson, setSelectPerson] = useState(null);
-  const HandelSumbit = (e) => {
+  const FINAL_PROMPT = ` Generate Travel Plan for Location: ${place} for ${days} days With  ${person} Person plan  With a ${budget} Budget ,Give me a Hotel Options List with Hotel Name, Hotel address ,Price Hotel image URL ,Geocoordinate, rating ,description and suggest itinerary with place Name, Place details ,place Image URL ,geo coordinate ,Ticket Pricing, rating Time travel each Of the location for 3 days With each day plan with best time to visit in Json format\n\n\n"text: "Generate Travel Plan for Location: Mumbai for #days for family With a cheap Budget ,Give me a Hotel Options List with Hotel Name, Hotel address ,Price Hotel image URL ,Geocoordinate, rating ,description and suggest itinerary with place Name, Place details ,place Image URL ,geo coordinate ,Ticket Pricing, rating Time travel each Of the location for 3 days With each day plan with best time to visit in Json format\n\n\n`;
+  const HandelSumbit = async (e) => {
+    if (place === "" || days === "" || budget === "" || person === "") {
+      toast.error("Please fill All The Fields");
+    }
     e.preventDefault();
     console.log(place, days, budget, person);
+    console.log(FINAL_PROMPT);
+    const result = await chatSession.sendMessage(FINAL_PROMPT);
+
+    console.log(result.response.text());
+
+    // console.log(result.response.text());
   };
   return (
     <>
       <div className=" flex flex-col items-center min-h-[95vh]  mt-[5vh]">
+        <ToastContainer />
         <h1 className=" text-[22px] sm:text-[27px] font-bold">
           {" "}
           Tell Us your Travel Prefrences
@@ -72,8 +88,7 @@ export const GenratePage = () => {
         </p>
         <form
           onSubmit={HandelSumbit}
-          className=" w-full xl:w-[50%] border 
-        border-red-400  text-[18px] font-semibold  "
+          className=" w-full xl:w-[50%] text-[18px] font-semibold  "
         >
           <div className=" m-3">
             <label htmlFor="Destination">Choose Your desination</label>
