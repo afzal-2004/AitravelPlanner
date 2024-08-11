@@ -70,6 +70,7 @@ export const GenratePage = () => {
     console.log(place, days, budget, person);
     console.log(FINAL_PROMPT);
     const result = await chatSession.sendMessage(FINAL_PROMPT);
+    localStorage.setItem("Name", "Rizvi");
 
     console.log(result.response.text());
 
