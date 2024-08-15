@@ -1,0 +1,191 @@
+{
+    "location": "China",
+    "duration": "4 days",
+    "budget": "low",
+    "number_of_travelers": 2,
+    "hotels": [
+        {
+            "name": "The Bund Youth Hostel",
+            "address": "No. 20, Fuzhou Road, Huangpu District, Shanghai, China",
+            "price": "$15 - $25 per night",
+            "image_url": "https://www.booking.com/hotel/cn/the-bund-youth-hostel.en-gb.html",
+            "geocoordinate": "31.2359° N, 121.4866° E",
+            "rating": 4,
+            "description": "A budget-friendly hostel in Shanghai, offering dorm-style accommodations and a social atmosphere."
+        },
+        {
+            "name": "7Days Inn - Shanghai Hongkou Football Stadium",
+            "address": "No. 300, Zhoujiazui Road, Hongkou District, Shanghai, China",
+            "price": "$20 - $30 per night",
+            "image_url": "https://www.booking.com/hotel/cn/7-days-inn-shanghai-hongkou-football-stadium.en-gb.html",
+            "geocoordinate": "31.2584° N, 121.4935° E",
+            "rating": 3.5,
+            "description": "A clean and basic hotel in Shanghai, offering comfortable rooms at a reasonable price."
+        },
+        {
+            "name": "Hanting Hotel - Xi'an Bell Tower",
+            "address": "No. 10, Beiyuanmen Street, Beilin District, Xi'an, Shaanxi, China",
+            "price": "$25 - $35 per night",
+            "image_url": "https://www.booking.com/hotel/cn/hanting-hotel-xi-an-bell-tower.en-gb.html",
+            "geocoordinate": "34.2632° N, 108.9512° E",
+            "rating": 4.5,
+            "description": "A modern and comfortable hotel in Xi'an, offering a convenient location near the Bell Tower."
+        }
+    ],
+    "itinerary": [
+        {
+            "day": "Day 1",
+            "theme": "Shanghai: City Exploration",
+            "schedule": [
+                {
+                    "time": "9:00 AM",
+                    "location": "The Bund",
+                    "details": "Iconic waterfront promenade with stunning views of the skyscrapers. Take a walk along the river and enjoy the atmosphere.",
+                    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Bund_Shanghai.jpg/1280px-The_Bund_Shanghai.jpg",
+                    "geocoordinate": "31.2359° N, 121.4866° E",
+                    "ticket_pricing": "Free",
+                    "rating": 4.8,
+                    "time_travel": "2 hours"
+                },
+                {
+                    "time": "12:00 PM",
+                    "location": "Yu Garden",
+                    "details": "Traditional Chinese garden with beautiful architecture, ponds, and pavilions. Enjoy a peaceful stroll and admire the details.",
+                    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Yu_Garden_Shanghai.jpg/1280px-Yu_Garden_Shanghai.jpg",
+                    "geocoordinate": "31.2341° N, 121.4788° E",
+                    "ticket_pricing": "¥30",
+                    "rating": 4.5,
+                    "time_travel": "2 hours"
+                },
+                {
+                    "time": "3:00 PM",
+                    "location": "Shanghai Museum",
+                    "details": "Excellent museum showcasing Chinese art, history, and culture. Explore the exhibits and learn about the country's rich heritage.",
+                    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Shanghai_Museum_Exterior.jpg/1280px-Shanghai_Museum_Exterior.jpg",
+                    "geocoordinate": "31.2352° N, 121.4773° E",
+                    "ticket_pricing": "Free",
+                    "rating": 4.2,
+                    "time_travel": "3 hours"
+                },
+                {
+                    "time": "7:00 PM",
+                    "location": "Nanjing Road",
+                    "details": "Busy shopping street with a mix of traditional and modern stores. Enjoy the vibrant atmosphere and browse the shops.",
+                    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Nanjing_Road_Shanghai.jpg/1280px-Nanjing_Road_Shanghai.jpg",
+                    "geocoordinate": "31.2306° N, 121.4725° E",
+                    "ticket_pricing": "Free",
+                    "rating": 4,
+                    "time_travel": "2 hours"
+                }
+            ]
+        },
+        {
+            "day": "Day 2",
+            "theme": "Xi'an: The Terracotta Army",
+            "schedule": [
+                {
+                    "time": "8:00 AM",
+                    "location": "Xi'an Terracotta Army",
+                    "details": "UNESCO World Heritage Site, home to thousands of life-sized terracotta warriors. An incredible sight and a must-see in China.",
+                    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Terracotta_Army_02.jpg/1280px-Terracotta_Army_02.jpg",
+                    "geocoordinate": "34.2334° N, 109.0274° E",
+                    "ticket_pricing": "¥150",
+                    "rating": 4.9,
+                    "time_travel": "4 hours"
+                },
+                {
+                    "time": "1:00 PM",
+                    "location": "Xi'an City Wall",
+                    "details": "Well-preserved ancient city wall, offering scenic views and a chance to walk or cycle around the historical site.",
+                    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Xi%27an_City_Wall_from_the_South_Gate.jpg/1280px-Xi%27an_City_Wall_from_the_South_Gate.jpg",
+                    "geocoordinate": "34.2632° N, 108.9512° E",
+                    "ticket_pricing": "¥54",
+                    "rating": 4.7,
+                    "time_travel": "2 hours"
+                },
+                {
+                    "time": "4:00 PM",
+                    "location": "Big Wild Goose Pagoda",
+                    "details": "Tang Dynasty Buddhist temple with a towering pagoda, offering stunning views of the city. Learn about the history and significance of this iconic site.",
+                    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Big_Wild_Goose_Pagoda_2017.jpg/1280px-Big_Wild_Goose_Pagoda_2017.jpg",
+                    "geocoordinate": "34.2476° N, 108.9362° E",
+                    "ticket_pricing": "Free",
+                    "rating": 4.4,
+                    "time_travel": "2 hours"
+                },
+                {
+                    "time": "7:00 PM",
+                    "location": "Muslim Quarter",
+                    "details": "Lively food street with a variety of traditional Chinese dishes. Enjoy a delicious meal and experience the local culture.",
+                    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Xi%27an_Muslim_Quarter_%282017-06%29.jpg/1280px-Xi%27an_Muslim_Quarter_%282017-06%29.jpg",
+                    "geocoordinate": "34.2642° N, 108.9526° E",
+                    "ticket_pricing": "Free",
+                    "rating": 4.2,
+                    "time_travel": "2 hours"
+                }
+            ]
+        },
+        {
+            "day": "Day 3",
+            "theme": "Guilin: Karst Mountains & Li River",
+            "schedule": [
+                {
+                    "time": "9:00 AM",
+                    "location": "Li River Cruise",
+                    "details": "Scenic cruise along the Li River, offering breathtaking views of the karst mountains. Capture stunning photographs and enjoy the natural beauty.",
+                    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Li_River_Guilin_20150309.jpg/1280px-Li_River_Guilin_20150309.jpg",
+                    "geocoordinate": "25.2882° N, 110.2877° E",
+                    "ticket_pricing": "¥150",
+                    "rating": 4.9,
+                    "time_travel": "3 hours"
+                },
+                {
+                    "time": "1:00 PM",
+                    "location": "Reed Flute Cave",
+                    "details": "Unique limestone cave with colorful rock formations and beautiful stalactites and stalagmites. Explore the cave and admire the natural wonders.",
+                    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Reed_Flute_Cave_Guilin.jpg/1280px-Reed_Flute_Cave_Guilin.jpg",
+                    "geocoordinate": "25.2812° N, 110.2795° E",
+                    "ticket_pricing": "¥90",
+                    "rating": 4.6,
+                    "time_travel": "2 hours"
+                },
+                {
+                    "time": "4:00 PM",
+                    "location": "Elephant Trunk Hill",
+                    "details": "Iconic hill with a rock formation resembling an elephant's trunk, offering stunning views of the Li River. Capture the iconic image and enjoy the scenery.",
+                    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Elephant_Trunk_Hill_Guilin.jpg/1280px-Elephant_Trunk_Hill_Guilin.jpg",
+                    "geocoordinate": "25.2850° N, 110.2926° E",
+                    "ticket_pricing": "Free",
+                    "rating": 4.5,
+                    "time_travel": "1 hour"
+                },
+                {
+                    "time": "7:00 PM",
+                    "location": "Seven Star Park",
+                    "details": "Scenic park with beautiful gardens, waterfalls, and caves. Enjoy a peaceful walk and relax amidst the natural beauty.",
+                    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Seven_Star_Park_Guilin.jpg/1280px-Seven_Star_Park_Guilin.jpg",
+                    "geocoordinate": "25.2801° N, 110.2995° E",
+                    "ticket_pricing": "¥60",
+                    "rating": 4.3,
+                    "time_travel": "2 hours"
+                }
+            ]
+        },
+        {
+            "day": "Day 4",
+            "theme": "Travel & Departure",
+            "schedule": [
+                {
+                    "time": "8:00 AM",
+                    "location": "Guilin to airport/train station",
+                    "details": "Transfer from Guilin to your departure point for your journey back home.",
+                    "image_url": null,
+                    "geocoordinate": null,
+                    "ticket_pricing": "Varies by transportation",
+                    "rating": null,
+                    "time_travel": "Varies by distance"
+                }
+            ]
+        }
+    ]
+}

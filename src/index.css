@@ -5,7 +5,7 @@
 
 * {
   margin: 0;
-  padding: 2px;
+  padding: 1px;
   box-sizing: border-box;
 }
 
@@ -45,4 +45,8 @@ button {
   @apply scale-110 border border-red-300;
   transition: all 0.3s;
   box-shadow: 2px 2px 2px slategrey, -2px -2px 2px slategray;
+}
+
+h2 {
+  @apply text-[20px] sm:text-[25px] font-medium bg-white m-3 p-2 rounded-2xl sm:w-[20%] w-[40%] flex justify-center text-nowrap;
 }

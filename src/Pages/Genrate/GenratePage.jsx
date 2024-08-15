@@ -5,9 +5,11 @@ import { MdOutlineFamilyRestroom } from "react-icons/md";
 import { FaUsers, FaUntappd, FaArrowRight } from "react-icons/fa6";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { Tripdata } from "./Tripdata";
 import { chatSession } from "../../Serveice/AiModel";
+import { Loader } from "../../Components/Loader";
 export const GenratePage = () => {
   const data = [
     {
@@ -53,7 +55,7 @@ export const GenratePage = () => {
       Person: "5 to 10",
     },
   ];
-
+  const [TripPlan, setTripPlan] = useState({});
   const [place, setplace] = useState("");
   const [days, setdays] = useState(null);
   const [budget, setbudget] = useState(null);
@@ -61,7 +63,21 @@ export const GenratePage = () => {
   // const [loader, setloader] = useState(false);
   const [SelectBudget, setSelectBudget] = useState(null);
   const [SelectPerson, setSelectPerson] = useState(null);
-  const FINAL_PROMPT = ` Generate Travel Plan for Location: ${place} for ${days} days With  ${person} Person plan  With a ${budget} Budget ,Give me a Hotel Options List with Hotel Name, Hotel address ,Price Hotel image URL ,Geocoordinate, rating ,description and suggest itinerary with place Name, Place details ,place Image URL ,geo coordinate ,Ticket Pricing, rating Time travel each Of the location for 3 days With each day plan with best time to visit in Json format\n\n\n"text: "Generate Travel Plan for Location: Mumbai for #days for family With a cheap Budget ,Give me a Hotel Options List with Hotel Name, Hotel address ,Price Hotel image URL ,Geocoordinate, rating ,description and suggest itinerary with place Name, Place details ,place Image URL ,geo coordinate ,Ticket Pricing, rating Time travel each Of the location for 3 days With each day plan with best time to visit in Json format\n\n\n`;
+
+  const FINAL_PROMPT = ` Generate Travel Plan for Location: ${place} for ${days} days With  ${person} number_of_travelers With a ${budget} Budget ,Give me a Hotel Options List with Hotel Name, Hotel address ,Price Hotel image URL ,Geocoordinate, rating ,description and suggest itinerary with place Name, Place details ,place Image URL ,geo coordinate ,Ticket Pricing, rating Time travel each Of the location for 3 days With each day plan with best time to visit in Json format\n\n\n"text: "Generate Travel Plan for Location: Mumbai for  3 days for family With a cheap Budget ,Give me a Hotel Options List with Hotel Name, Hotel address ,Price Hotel image URL ,Geocoordinate, rating ,description and suggest itinerary with place Name, Place details ,place Image URL ,geo coordinate ,Ticket Pricing, rating Time travel each Of the location for 3 days With each day plan with best time to visit in Json format\n\n\n`;
+
+  useEffect(() => {
+    axios
+      .get("/Trip.json")
+      .then((response) => {
+        console.log(response.data);
+        setTripPlan(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   const HandelSumbit = async (e) => {
     if (place === "" || days === "" || budget === "" || person === "") {
       toast.error("Please fill All The Fields");
@@ -70,12 +86,12 @@ export const GenratePage = () => {
     console.log(place, days, budget, person);
     console.log(FINAL_PROMPT);
     const result = await chatSession.sendMessage(FINAL_PROMPT);
-    localStorage.setItem("Name", "Rizvi");
-
     console.log(result.response.text());
-
-    // console.log(result.response.text());
+    const JsonString = result.response.text();
+    const data = JSON.parse(JsonString);
+    setTripPlan(data);
   };
+
   return (
     <>
       <div className=" flex flex-col items-center min-h-[95vh]  mt-[5vh]">
@@ -169,6 +185,14 @@ export const GenratePage = () => {
           </button>
         </form>
       </div>
+
+      {Object.keys(TripPlan) > 0 ? (
+        <Loader />
+      ) : (
+        <Tripdata TripPlan={TripPlan} />
+      )}
     </>
   );
 };
+
+// eslint-disable-next-line react/prop-types

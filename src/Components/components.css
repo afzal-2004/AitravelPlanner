@@ -1,0 +1,32 @@
+ .LoaderStyle {
+     @apply md:w-[200px] md:h-[200px] sm:h-[100px] sm:w-[100px] border-2 border-slate-400 border-b-0 rounded-full;
+     animation: Rotate 0.5s linear infinite;
+ }
+
+ @keyframes Rotate {
+     0% {
+         transform: rotate(60deg);
+     }
+
+     20% {
+         transform: rotate(120deg);
+     }
+
+     40% {
+         transform: rotate(180deg);
+     }
+
+     60% {
+         transform: rotate(240deg);
+     }
+
+     80% {
+         transform: rotate(300deg);
+     }
+
+     100% {
+         transform: rotate(360deg);
+     }
+
+
+ }
