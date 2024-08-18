@@ -60,11 +60,10 @@ export const GenratePage = () => {
   const [days, setdays] = useState(null);
   const [budget, setbudget] = useState(null);
   const [person, setperson] = useState(null);
-  // const [loader, setloader] = useState(false);
   const [SelectBudget, setSelectBudget] = useState(null);
   const [SelectPerson, setSelectPerson] = useState(null);
 
-  const FINAL_PROMPT = ` Generate Travel Plan for Location: ${place} for ${days} days With  ${person} number_of_travelers With a ${budget} Budget ,Give me a Hotel Options List with Hotel Name, Hotel address ,Price Hotel image URL ,Geocoordinate, rating ,description and suggest itinerary with place Name, Place details ,place Image URL ,geo coordinate ,Ticket Pricing, rating Time travel each Of the location for 3 days With each day plan with best time to visit in Json format\n\n\n"text: "Generate Travel Plan for Location: Mumbai for  3 days for family With a cheap Budget ,Give me a Hotel Options List with Hotel Name, Hotel address ,Price Hotel image URL ,Geocoordinate, rating ,description and suggest itinerary with place Name, Place details ,place Image URL ,geo coordinate ,Ticket Pricing, rating Time travel each Of the location for 3 days With each day plan with best time to visit in Json format\n\n\n`;
+  const FINAL_PROMPT = ` Generate Travel Plan for Location: ${place} for ${days} days With  ${person} number_of_travelers With a ${budget} Budget ,Give me a Hotel Options List with Hotel Name, Hotel address ,Price Hotel image URL ,Geocoordinate, rating ,description and suggest itinerary with place Name, Place details ,place Image URL ,geo coordinate ,Ticket Pricing, rating Time travel each Of the location for 3 days With each day plan with best time to visit  place between  All data  in Json format\n\n\n`;
 
   useEffect(() => {
     axios
@@ -194,5 +193,3 @@ export const GenratePage = () => {
     </>
   );
 };
-
-// eslint-disable-next-line react/prop-types
