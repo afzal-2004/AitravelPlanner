@@ -4,7 +4,7 @@ export const HomePage = () => {
   return (
     <>
       <div className=" flex flex-col items-center justify-center min-h-[90vh]">
-        <main className=" border border-red-500 sm:w-[80vw] flex flex-col  w-[90vw]    justify-center items-center gap-3 ">
+        <main className="  sm:w-[80vw] flex flex-col  w-[90vw]    justify-center items-center gap-3 ">
           <h1 className="text-[30px] font-bold text-center">
             Discover the Future
             <span className="text-blue-500">of Travel with AI</span>

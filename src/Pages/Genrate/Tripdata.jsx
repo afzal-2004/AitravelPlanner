@@ -1,17 +1,22 @@
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line react/prop-types
 
+import { Loader } from "../../Components/Loader";
+
 export const Tripdata = ({ TripPlan }) => {
   return (
     <>
       {Object.keys(TripPlan).length > 0 ? (
         <>
+          <h1 className="text-center sm:text-[27px] text-[22px] font-semibold">
+            Your Travelling Plan
+          </h1>
           <div
             className=" p-4 xl:p-40 mt-[5vh] 
           sm:mt-[10vh]"
           >
             <img
-              src={`https://i.ytimg.com/vi/ebgJWqn50HI/maxresdefault.jpg`}
+              src={`https://images.pexels.com/photos/386009/pexels-photo-386009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`}
               alt=""
               className=" w-full rounded-3xl sm:max-h-[500px] object-cover"
             />
@@ -34,7 +39,7 @@ export const Tripdata = ({ TripPlan }) => {
           <VisitingPlace TripPlan={TripPlan} />
         </>
       ) : (
-        ""
+        <Loader />
       )}
     </>
   );
