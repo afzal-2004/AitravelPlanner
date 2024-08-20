@@ -1,4 +1,4 @@
-# React + Vite
+# AiTravel Planner with React+Vite , Google gemini Api, Tailwind Css
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
