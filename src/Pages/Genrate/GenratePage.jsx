@@ -102,7 +102,6 @@ export const GenratePage = ({
               type="Number"
               placeholder="Ex.5"
               min={1}
-              max={10}
               className="w-full p-2 rounded-md outline-none"
               onChange={(e) => {
                 e.target.value;

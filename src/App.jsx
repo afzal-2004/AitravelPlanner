@@ -6,7 +6,7 @@ import { GenratePage } from "./Pages/Genrate/GenratePage";
 import { Tripdata } from "./Pages/Genrate/Tripdata";
 import { useState, useEffect } from "react";
 import { chatSession } from "./Serveice/AiModel";
-// import axios from "axios";
+
 import { toast } from "react-toastify";
 function App() {
   const [TripPlan, setTripPlan] = useState({});
@@ -42,17 +42,6 @@ function App() {
     setTripPlan({});
   }, []);
 
-  // useEffect(() => {
-  //   axios
-  //     .get("/Trip.json")
-  //     .then((response) => {
-  //       console.log(response.data);
-  //       setTripPlan(response.data);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // }, []);
   return (
     <>
       <BrowserRouter>
