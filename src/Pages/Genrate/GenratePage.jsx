@@ -3,7 +3,8 @@ import { GiReceiveMoney, GiMoneyStack, GiTakeMyMoney } from "react-icons/gi";
 import { GrMoney } from "react-icons/gr";
 import { PiBeerBottle } from "react-icons/pi";
 import { MdOutlineFamilyRestroom } from "react-icons/md";
-import { FaUsers, FaUntappd, FaArrowRight } from "react-icons/fa6";
+import { FaUsers, FaArrowRight } from "react-icons/fa6";
+import { GiFaceToFace } from "react-icons/gi";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
@@ -38,7 +39,7 @@ export const GenratePage = ({
     },
     {
       icon: <GrMoney className="text-[70px]" />,
-      Text: "Luxcery",
+      Text: "Luxery",
       Expences: "10K$ Above ",
     },
   ];
@@ -50,7 +51,7 @@ export const GenratePage = ({
       Person: "1",
     },
     {
-      icon: <FaUntappd className="text-[70px]" />,
+      icon: <GiFaceToFace className="text-[70px]" />,
       Text: "Couple",
       Person: "2",
     },
