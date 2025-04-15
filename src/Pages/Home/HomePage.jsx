@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa6";
+import Hero from "./Hero";
 export const HomePage = () => {
   return (
     <>
-      <div className=" flex flex-col items-center justify-center min-h-[90vh]">
+      <div className=" flex flex-col items-center justify-center min-h-[50vh]">
         <main className="  sm:w-[80vw] flex flex-col  w-[90vw]    justify-center items-center gap-3 ">
           <h1 className="text-[30px] font-bold text-center">
             Discover the Future
@@ -18,6 +19,7 @@ export const HomePage = () => {
           </Link>
         </main>
       </div>
+      <Hero />
     </>
   );
 };
